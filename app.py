@@ -6,7 +6,7 @@ import streamlit as st
 
 # -------------------- Load Data --------------------
 url = "https://2ybttv-my.sharepoint.com/:x:/r/personal/salahuddinsoftsync_2ybttv_onmicrosoft_com/_layouts/15/doc2.aspx?sourcedoc=%7B5F280B71-456C-4606-ABD0-0235A18CF92D%7D&file=SALE.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&wdOrigin=OFFICECOM-WEB.APPGALLERY%2CAPPHOME-WEB.JUMPBACKIN&wdPreviousSession=9c00a8fe-29dd-463b-b23b-8230da84899c&wdPreviousSessionSrc=AppHomeWeb&ct=1763909978412"
-df = pd.read_excel('url')
+df = pd.read_excel(url)
 df['date'] = pd.to_datetime(df['date'])
 
 # -------------------- Page Config --------------------
