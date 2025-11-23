@@ -5,7 +5,7 @@ import seaborn as sns
 import streamlit as st
 
 # -------------------- Load Data --------------------
-url = 'https://docs.google.com/spreadsheets/d/1iJQkpN_J5KCJddan0OVVQcOW49pHvvuNfbtngxvRsDU/edit?gid=1951342066#gid=1951342066'
+url = '1iJQkpN_J5KCJddan0OVVQcOW49pHvvuNfbtngxvRsDU/edit?gid=1951342066#gid=1951342066'
 df = pd.read_excel(url)
 df['date'] = pd.to_datetime(df['date'])
 
@@ -196,4 +196,5 @@ corr = filtered_df[['item_price', 'quantity', 'transaction_amount']].corr()
 fig, ax = plt.subplots(figsize=(6,3))
 sns.heatmap(corr, annot=True, cmap='coolwarm', ax=ax)
 st.pyplot(fig)
+
 
